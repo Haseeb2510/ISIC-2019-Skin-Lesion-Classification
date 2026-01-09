@@ -168,7 +168,7 @@ pip install tensorflow torch torchvision pandas pillow opencv-python scikit-lear
 
 ### Get Dataset
 Download ISIC 2019 dataset from: https://challenge.isic-archive.com/data/?utm_source=chatgpt.com#2019
-and extract it in raw folder
+and extract it in data/raw folder
 
 ### Quick Start
 1. **Prepare Data**:
@@ -266,3 +266,4 @@ Educational/Research Use Only - Not for Clinical Diagnosis
 
 
 *This project demonstrates a complete deep learning pipeline for medical image analysis, balancing research rigor with practical implementation considerations.*
+
