@@ -165,8 +165,11 @@ SkinConditionAssistant/
 - **Best Performance**: BCC (F1: 0.84), SCC (F1: 0.89)  
 - **Challenging Classes**: VASC (F1: 0.39), DF (F1: 0.56)
 
-**Note**:  
-While BKL also performs reasonably well (F1: 0.71), the highest F1 scores belong to BCC and SCC. VASC and DF show the lowest performance, with VASC being particularly challenging due to low recall (0.29). The overall accuracy is 0.73, with macro-average F1 at 0.65, indicating class imbalance effects.
+#### Key Insights:
+- **Strong performance on common lesions (BCC, BKL)** – Achieved F1 scores of 0.84 and 0.71, reflecting good performance on frequently-seen classes.
+- **Expected difficulty on rare classes (VASC, DF)** – Showed the lowest F1 scores (0.39 and 0.56), consistent with the challenge of learning from limited data.
+- **Moderate melanoma recall (0.58) – important clinical target** – While recall (0.58) is moderate, further improvement is critical for early detection of melanoma (MEL).
+- **Confusion between benign-looking classes (NV, BKL)** – Classes with overlapping visual features, such as NV (F1: 0.63) and BKL (F1: 0.71), show potential for confusion in the model.
 
 ## 🚀 Usage
 
@@ -275,5 +278,6 @@ Educational/Research Use Only - Not for Clinical Diagnosis
 
 
 *This project demonstrates a complete deep learning pipeline for medical image analysis, balancing research rigor with practical implementation considerations.*
+
 
 
