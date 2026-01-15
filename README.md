@@ -166,10 +166,10 @@ SkinConditionAssistant/
 - **Challenging Classes**: VASC (F1: 0.39), DF (F1: 0.56)
 
 #### Key Insights:
-- **Strong performance on common lesions (BCC, BKL)** – Achieved F1 scores of 0.84 and 0.71, reflecting good performance on frequently-seen classes.
-- **Expected difficulty on rare classes (VASC, DF)** – Showed the lowest F1 scores (0.39 and 0.56), consistent with the challenge of learning from limited data.
-- **Moderate melanoma recall (0.58) – important clinical target** – While recall (0.58) is moderate, further improvement is critical for early detection of melanoma (MEL).
-- **Confusion between benign-looking classes (NV, BKL)** – Classes with overlapping visual features, such as NV (F1: 0.63) and BKL (F1: 0.71), show potential for confusion in the model.
+- **Strong on common lesions (BCC, BKL)** – F1: 0.84 and 0.71
+- **Challenged by rare classes (VASC, DF)** – F1: 0.39 and 0.56
+- **Melanoma recall moderate (0.58)** – Critical clinical target
+- **Confusion among benign classes (NV, BKL)** – Overlapping visual features
 
 ## 🚀 Usage
 
@@ -278,6 +278,7 @@ Educational/Research Use Only - Not for Clinical Diagnosis
 
 
 *This project demonstrates a complete deep learning pipeline for medical image analysis, balancing research rigor with practical implementation considerations.*
+
 
 
 
