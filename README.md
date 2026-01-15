@@ -153,11 +153,20 @@ SkinConditionAssistant/
 - **Best Performance**: BCC (F1: 0.86), BKL (F1: 0.74)
 - **Challenging Classes**: VASC (F1: 0.38), DF (F1: 0.53)
 
-### Key Insights
+#### Key Insights
 - Strong performance on common lesions (BCC, BKL)
 - Expected difficulty on rare classes (VASC, DF)
 - Moderate melanoma recall (0.52) - important clinical target
 - Confusion between benign-looking classes (NV, BKL)
+
+### PyTorch Model
+- **Test Accuracy**: 74.36%
+- **Test Loss**: 1.285
+- **Best Performance**: BCC (F1: 0.84), SCC (F1: 0.89)  
+- **Challenging Classes**: VASC (F1: 0.39), DF (F1: 0.56)
+
+**Note**:  
+While BKL also performs reasonably well (F1: 0.71), the highest F1 scores belong to BCC and SCC. VASC and DF show the lowest performance, with VASC being particularly challenging due to low recall (0.29). The overall accuracy is 0.73, with macro-average F1 at 0.65, indicating class imbalance effects.
 
 ## 🚀 Usage
 
@@ -266,4 +275,5 @@ Educational/Research Use Only - Not for Clinical Diagnosis
 
 
 *This project demonstrates a complete deep learning pipeline for medical image analysis, balancing research rigor with practical implementation considerations.*
+
 
