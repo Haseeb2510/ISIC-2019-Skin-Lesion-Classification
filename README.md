@@ -1,4 +1,4 @@
-# 🧬 ISIC 2019 Skin Lesion Classification
+# 🧬 ISIC 2019 Skin Condition Classification
 
 ## 📋 Project Overview
 
@@ -278,6 +278,7 @@ Educational/Research Use Only - Not for Clinical Diagnosis
 
 
 *This project demonstrates a complete deep learning pipeline for medical image analysis, balancing research rigor with practical implementation considerations.*
+
 
 
 
