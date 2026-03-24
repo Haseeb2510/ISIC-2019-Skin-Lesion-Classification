@@ -1,4 +1,8 @@
-# 🧬 ISIC 2019 Skin Condition Classification
+<p align="center">
+  <img src="media/demo.gif" alt="Demo" width="600"/>
+</p>
+
+# 🧬 ISIC 2019 Skin Lesion Classification
 
 ## 📋 Project Overview
 
@@ -6,7 +10,7 @@ This project implements a complete deep learning pipeline for classifying skin l
 
 ## 🎯 Objectives
 
-- Develop robust CNN models for 8-class skin lesion classification
+- Develop robust CNN models for 9-class skin lesion classification
 - Implement medical-specific image preprocessing (CLAHE, hair removal)
 - Address class imbalance through weighted loss functions
 - Compare TensorFlow and PyTorch implementations
@@ -14,7 +18,7 @@ This project implements a complete deep learning pipeline for classifying skin l
 
 ## 📁 Dataset
 
-**ISIC 2019 Dataset** - Dermoscopic images with 8 diagnostic categories:
+**ISIC 2019 Dataset** - Dermoscopic images with 9 diagnostic categories:
 
 | Class | Description | Prevalence |
 |-------|-------------|------------|
@@ -26,6 +30,7 @@ This project implements a complete deep learning pipeline for classifying skin l
 | DF | Dermatofibroma | Low |
 | VASC | Vascular Lesions | Low |
 | SCC | Squamous Cell Carcinoma | Low |
+| UNK | Unknown | Low |
 
 ## 🏗️ Project Structure
 
@@ -39,7 +44,7 @@ SkinConditionAssistant/
 │   ├── val/                            # Validation imgs
 │   └── test/                           # Test imgs
 │
-├── data_cleaning/                      # Working on data and splitting for train, val and test
+├── data_cleaning/                      # Working on data and splitting for Train, val and test
 │   ├── clean_data.py
 │   ├── EDA.py
 │   ├── image_engineering.py
@@ -153,23 +158,11 @@ SkinConditionAssistant/
 - **Best Performance**: BCC (F1: 0.86), BKL (F1: 0.74)
 - **Challenging Classes**: VASC (F1: 0.38), DF (F1: 0.53)
 
-#### Key Insights
+### Key Insights
 - Strong performance on common lesions (BCC, BKL)
 - Expected difficulty on rare classes (VASC, DF)
 - Moderate melanoma recall (0.52) - important clinical target
 - Confusion between benign-looking classes (NV, BKL)
-
-### PyTorch Model
-- **Test Accuracy**: 74.36%
-- **Test Loss**: 1.285
-- **Best Performance**: BCC (F1: 0.84), SCC (F1: 0.89)  
-- **Challenging Classes**: VASC (F1: 0.39), DF (F1: 0.56)
-
-#### Key Insights:
-- **Strong on common lesions (BCC, BKL)** – F1: 0.84 and 0.71
-- **Challenged by rare classes (VASC, DF)** – F1: 0.39 and 0.56
-- **Melanoma recall moderate (0.58)** – Critical clinical target
-- **Confusion among benign classes (NV, BKL)** – Overlapping visual features
 
 ## 🚀 Usage
 
@@ -177,10 +170,6 @@ SkinConditionAssistant/
 ```bash
 pip install tensorflow torch torchvision pandas pillow opencv-python scikit-learn matplotlib seaborn joblib tqdm
 ```
-
-### Get Dataset
-Download ISIC 2019 dataset from: https://challenge.isic-archive.com/data/?utm_source=chatgpt.com#2019
-and extract it in data/raw folder
 
 ### Quick Start
 1. **Prepare Data**:
@@ -197,7 +186,7 @@ and extract it in data/raw folder
 
 3. **Train PyTorch Model**:
 ```python
-# Run model_training.py in pytorch_training folder 
+# Run pytorch_training.ipynb
 # Models saved to models/pytorch/
 ```
 
@@ -276,10 +265,4 @@ Educational/Research Use Only - Not for Clinical Diagnosis
 
 ---
 
-
 *This project demonstrates a complete deep learning pipeline for medical image analysis, balancing research rigor with practical implementation considerations.*
-
-
-
-
-
